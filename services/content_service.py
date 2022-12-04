@@ -121,8 +121,8 @@ def compare_text_result(request):
 
 def get_text_from_speech(file_name, request):
     text_recognizer = ""
-    path_file = f"./{CmnConst.UPLOAD_FOLDER}/{file_name}.wav"
-    path_file_temp = f"./{CmnConst.UPLOAD_FOLDER}/{file_name}_temp"
+    path_file = f"{file_name}.wav"
+    path_file_temp = f"{file_name}_temp"
     for audio_chunk in __load_chunks(path_file):
         audio_chunk.export(path_file_temp, format="wav")
         with sr.AudioFile(path_file_temp) as source:
