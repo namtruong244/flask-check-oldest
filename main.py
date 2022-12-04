@@ -15,7 +15,6 @@ from schemas.content_schema import validate_content
 from schemas.user_schema import validate_user
 from services import user_service, content_service
 from utils.util import CmnUtil
-from werkzeug.utils import secure_filename
 from config.cmn_const import CmnConst
 import uuid
 
